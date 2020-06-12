@@ -1,0 +1,216 @@
+body {
+    background: #101820FF;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    height: 100%;
+    overflow: hidden;
+}
+
+@keyframes spin {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -630px 0;
+    }
+}
+
+::selection {
+    background: white;
+    color: #101820FF;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+  }
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+    font-size: 1.5vh;
+}
+
+#info {
+    height: 3vmin;
+}
+
+#info:hover {
+    cursor: pointer;
+}
+
+#header {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-size: 5vmin;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;   
+}
+
+#overlay {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color: rgba(1, 0, 14, 0.75);
+
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    line-height: 0.25vmin;
+
+    font-family: sans-serif;
+    font-size: 3vmin;
+    font-family: 'Roboto', sans-serif;   
+}
+
+#overlay:hover{
+    cursor: pointer;
+}
+
+.planets {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planet {
+    width: 7vw;
+    height: 7vw;
+    border-radius: 50%;
+    transition: 500ms;
+    background-size: cover;
+    margin: 1vw;
+    text-align: center;
+}
+
+.planet:hover {
+    width: 9vw;
+    height: 9vw;
+    cursor: pointer;
+}
+
+.planets .mercury {
+    background-image: url(planets/mercury.jpg);
+    animation: spin 5067014s linear infinite;
+}
+
+.planets .venus {
+    background-image: url(planets/venus.jpg);
+    animation: spin 20995200s linear infinite;
+}
+
+.planets .earth {
+    background-image: url(planets/earth.jpg);
+    animation: spin 86400s linear infinite;
+}
+
+.planets .mars {
+    background-image: url(planets/mars.jpg);
+    animation: spin 90000s linear infinite;
+}
+
+.planets .jupiter {
+    background-image: url(planets/jupiter.jpg);
+    animation: spin 36000s linear infinite;
+}
+
+.planets .saturn {
+    background-image: url(planets/saturn.jpg);
+    animation: spin 39600s linear infinite;
+}
+
+.planets .uranus {
+    background-image: url(planets/uranus.jpg);
+    animation: spin 61200s linear infinite;
+}
+
+.planets .neptune {
+    background-image: url(planets/neptune.jpg);
+    animation: spin 57600s linear infinite;
+}
+
+.planets .pluto {
+    background-image: url(planets/pluto.jpg);
+    animation: spin 551880s linear infinite;
+}
+
+.buttons {
+    display: flex;
+    position: absolute;
+    bottom: 2vmin;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.buttons button:hover {
+    color: #101820FF;
+    background-color: white;
+    cursor: pointer;
+}
+
+.buttons button {
+    color: white;
+    width: 15vmin;
+    height: 7.5vmin;
+    background-color: #101820FF;
+    border: 0.2vmin white solid;
+    font-size: 2vmin;
+    margin: 1vmin;
+    transition: 500ms;
+    border-radius: 250px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 1vmin;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: 'Roboto', sans-serif;
+    color: #436384;
+    font-size: 2vmin;
+}
+
+@media (max-width:700px) {
+    .planets {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .planet {
+        width: 10vw;
+        height: 10vw;
+        border-radius: 50%;
+        transition: 500ms;
+        background-size: cover;
+        margin: 1vw;
+        text-align: center;
+    }
+
+    .buttons {
+        flex-direction: column;
+        top: 62.5%;
+        left: 25%;
+        transform: translate(-50%, -50%);
+    }
+
+    .buttons button {
+        width: 20vmin;
+        height: 5vmin;
+    }
+}

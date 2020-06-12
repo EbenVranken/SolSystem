@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>SOL SYSTEM</title>
+</head>
+
+<body onload="loading();">
+
+    <div class="container">
+
+        <div class="loader"></div>
+
+        <h1 id="header"><img src="img/information.png" id="info" onclick="on();"> SOL SYSTEM</h1>
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+        <div class="planets">
+            <div class="mercury planet" id="mercury"></div>
+            <div class="venus planet" id="venus"></div>
+            <div class="earth planet" id="earth"></div>
+            <div class="mars planet" id="mars"></div>
+            <div class="jupiter planet" id="jupiter"></div>
+            <div class="saturn planet" id="saturn"></div>
+            <div class="uranus planet" id="uranus"></div>
+            <div class="neptune planet" id="neptune"></div>
+            <div class="pluto planet" id="pluto"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button onclick="one();">x1</button>
+        <button onclick="ten();">x10</button>
+        <button onclick="hundred();">x100</button>
+        <button onclick="thousand();">x1000</button>
+    </div>
+
+    <div id="overlay" onclick="off();">
+        <p>On this site, you can put into perspective</p>
+        <p>how slow, yet so incredibly fast our co-planets</p>
+        <p>and us traveling. Protecting us from multiple cata-</p>
+        <p>strophes and opening the gateway to new technology</p>
+        <p>and let human-kind proceed to the final frontier</p>
+        <p>Our solar system is the future of us all.</p>
+    </div>
+
+    <div class="footer">
+        Project by Eben Vranken - 6th of June 2020
+    </div>
+</body>
+
+</html>
